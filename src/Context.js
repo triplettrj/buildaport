@@ -8,7 +8,7 @@ function ContextProvider(props) {
 	const [beer, setBeer] = useState([])
 
 	const urlram = "https://rickandmortyapi.com/api/character/1,2,3,4,5"
-	const urlbeer = "https://raw.githubusercontent.com/triplettrj/buildaport/master/beerstuff/bmbimageee.json"
+	const urlbeer = "https://raw.githubusercontent.com/triplettrj/buildaport/main/beerstuff/beerimagesjson.json"
 
 	useEffect(() => {
 			fetch(urlram)
