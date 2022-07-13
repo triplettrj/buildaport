@@ -5,7 +5,10 @@ import "../styles.css"
 
 function RickandMorty() {
    const {ramPhotos} = useContext(Context)
+<<<<<<< HEAD
    console.log(ramPhotos)
+=======
+>>>>>>> master
    const imageElements = ramPhotos.map(function(data) { return(
        <RickandMortyComp data={data} />
    )})

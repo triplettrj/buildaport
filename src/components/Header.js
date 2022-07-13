@@ -21,7 +21,11 @@ function Header(props) {
 						<li><Link to="/"><h2 className='box'>Home</h2></Link></li>
 						<li><Link to="/about"><h2 className='box'>About</h2></Link></li>
 						<li><Link to="/buymeabeer"><h2 className='box'>BuyMeABeer</h2></Link></li>
+<<<<<<< HEAD
 						<li><Link to="/RickandMorty"><h2 className='box'>RickandMorty</h2></Link></li>
+=======
+						<li><Link to="/cart"><h2 className='box'>Cart</h2></Link></li>
+>>>>>>> master
 						<li><Link to="/blog"><h2 className='box'>Blog</h2></Link></li>
 						<li><Link to="/contact"><h2 className='box'>Contact</h2></Link></li>
 					</ul>

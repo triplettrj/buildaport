@@ -1,0 +1,7 @@
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center, space-between;
+    padding: 5rem;
+    background-color: #FFFFFF;
+  }

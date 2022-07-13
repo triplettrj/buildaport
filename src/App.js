@@ -7,7 +7,11 @@ import About from "./pages/About"
 import BuyMeABeer from "./pages/BuyMeABeer"
 import Blog from "./pages/Blog"
 import Contact from "./pages/Contact"
+<<<<<<< HEAD
 import RickandMorty from "./pages/RickandMorty"
+=======
+import Cart from "./pages/Cart"
+>>>>>>> master
 import "./styles.css" 
 
 
@@ -25,8 +29,13 @@ function App() {
         <Route path="/buymeabeer">
             <BuyMeABeer />
         </Route>
+<<<<<<< HEAD
         <Route path="/RickandMorty">
             <RickandMorty />
+=======
+        <Route path="/cart">
+            <Cart />
+>>>>>>> master
         </Route>
         <Route path="/blog">
             <Blog />
