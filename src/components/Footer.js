@@ -1,11 +1,12 @@
 import React from 'react'
+import "./footer.css" 
 import PropTypes from 'prop-types'
 
 function Footer(props) {
 	return (
-		<div>
-			Footer
-		</div>
+		<footer >
+			Cool Footer Bro
+		</footer>
 	)
 }
 

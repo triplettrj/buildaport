@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 function About(props) {
 	return (
 		<div>
-			About
+			About I AM REAL HUMAN
 		</div>
 	)
 }

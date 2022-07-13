@@ -7,11 +7,13 @@ import About from "./pages/About"
 import BuyMeABeer from "./pages/BuyMeABeer"
 import Blog from "./pages/Blog"
 import Contact from "./pages/Contact"
+import Cart from "./pages/Cart"
+import "./styles.css" 
 
 
 function App() {
   return (
-    <div>
+    <div className="pancake">
       <Header />
       <Switch>
         <Route exact path="/">
@@ -22,6 +24,9 @@ function App() {
         </Route>
         <Route path="/buymeabeer">
             <BuyMeABeer />
+        </Route>
+        <Route path="/cart">
+            <Cart />
         </Route>
         <Route path="/blog">
             <Blog />

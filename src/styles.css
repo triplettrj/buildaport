@@ -10,4 +10,26 @@
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}*/
+}*/ 
+.pancake {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+.centered {
+    display: grid;
+    place-items: center;
+  }
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #FFFFFF;
+  }
+
+.box {
+    flex: 1 1 150px; /*  Stretching: */
+    flex: 0 1 150px; /*  No stretching: */
+    margin: 5px;
+  }
