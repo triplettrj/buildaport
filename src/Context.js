@@ -1,61 +1,35 @@
 import React, {useState, useEffect} from 'react'
-<<<<<<< HEAD
-=======
 import data from "./beerstuff/data.js"
->>>>>>> master
 
 const Context = React.createContext()
 
 function ContextProvider(props) {
-<<<<<<< HEAD
-	const [ramPhotos, setRamPhotos] = useState([])
-	const [beerPhotos, setBeerPhotos] = useState([])
-	const [beer, setBeer] = useState([])
-
-	const urlram = "https://rickandmortyapi.com/api/character/1,2,3,4,5"
-	const urlbeer = "https://raw.githubusercontent.com/triplettrj/buildaport/main/beerstuff/beerimagesjson.json"
-
-	useEffect(() => {
-			fetch(urlram)
-				.then(res => res.json())
-				.then(data => setRamPhotos(data))
-
-			fetch(urlbeer)
-				.then(res => res.json())
-				.then(data => setBeerPhotos(data))
-	}, [])
-
-    function addToBeer(newBeer) {
-        setBeer(prevBeer => [...prevBeer, newBeer]) //This accepts the id of beerPhotos and adds it to beer 
-    }
-
-    function subToBeer(newBeer) {
-    	alert("sorry not sorry cannot take away beer");
-    }
-
-    return (
-        <Context.Provider value={{ramPhotos, beerPhotos, addToBeer, subToBeer, beer}}>
-=======
 	const [beerData, setBeerData/* to use in the useEffect below to fetch data from my github*/
 								] = useState(data)
 	const [beer, setBeer] = useState([]) //the beer cart
 
-	let yo = ''
-
     const addToBeer = (newBeer) => {
-		const isClickedNewBeer = (item, newBeer) => item.id === newBeer.id
+		const isClickedNewBeer = (item) => {
+			console.log('this is item.id inside isclickednewbeer', item.id)
+			console.log('this is newBeer inside isclickednewbeer', newBeer.id)
+			return item.id === newBeer.id
+		}
 		
 		const exist = beer.find(isClickedNewBeer)//this is fucked and is always false
-			if (exist){
-				yo = 'true'
-			}else {yo = 'false' }
+		console.log('this is beer (before) ', beer) 
+		console.log('this is exist (before) ', exist) 
+
 			if (exist) {
+				console.log('this is beer (if) ', beer) 
+				console.log('this is exist (if) ', exist) 
 				setBeer(
 					beer.map( item => 
-						item.id === newBeer.id ? {...exist, qty: exist.qyt +1} : item)
+						item.id === newBeer.id ? {...exist, qty: exist.qty +1} : item)
 				)
 			} 
 			else {
+				console.log('this is beer (else) ', beer) 
+				console.log('this is exist (else) ', exist) 
 				setBeer([...beer, {...newBeer, qty: 1}])
 			}
 
@@ -71,14 +45,11 @@ function ContextProvider(props) {
 
     return (
         <Context.Provider value={{beerData, addToBeer, subToBeer, beer}}>
->>>>>>> master
             {props.children}
         </Context.Provider>
     )
 }
 
-<<<<<<< HEAD
-=======
 /*
 	const [ramPhotos, setRamPhotos] = useState([])
 
@@ -109,5 +80,4 @@ function ContextProvider(props) {
 	}
 	*/
 
->>>>>>> master
 export {ContextProvider, Context}

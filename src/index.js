@@ -8,21 +8,12 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
 	<ContextProvider>
 		<Router>
-<<<<<<< HEAD
-		  <React.StrictMode>
-		    <App />
-		  </React.StrictMode>
-	  	</Router>
-  	</ContextProvider>,
-  document.getElementById('root')
-=======
 			<React.StrictMode>
 				<App />
 			</React.StrictMode>
 		</Router>
 	</ContextProvider>,
 	document.getElementById('root')
->>>>>>> master
 );
 
 // If you want your app to work offline and load faster, you can change
