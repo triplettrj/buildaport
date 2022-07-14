@@ -15,7 +15,7 @@ function ContextProvider(props) {
 			return item.id === newBeer.id
 		}
 		
-		const exist = beer.find(isClickedNewBeer)//this is fucked and is always false
+		const exist = beer.find(isClickedNewBeer)
 		console.log('this is beer (before) ', beer) 
 		console.log('this is exist (before) ', exist) 
 
@@ -23,14 +23,15 @@ function ContextProvider(props) {
 				console.log('this is beer (if) ', beer) 
 				console.log('this is exist (if) ', exist) 
 				setBeer(
-					beer.map( item => 
-						item.id === newBeer.id ? {...exist, qty: exist.qty +1} : item)
+					beer.map( item => item.id === newBeer.id ? {...exist, qty: exist.qty +1} : item)
 				)
 			} 
 			else {
 				console.log('this is beer (else) ', beer) 
 				console.log('this is exist (else) ', exist) 
+				console.log('this is newBeer (else) ', newBeer) 
 				setBeer([...beer, {...newBeer, qty: 1}])
+				console.log('this is beer (else after setBeer) ', beer) 
 			}
 
 		console.log('this is beer  ', beer) 
