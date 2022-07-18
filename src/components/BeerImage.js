@@ -3,17 +3,18 @@ import {Context} from "../Context"
 import "./beerimage.css" 
 
 const BeerImage = ({data}) => {
-	const {addToBeer, subToBeer, beer} = useContext(Context)
+	const {addToBeer} = useContext(Context)
 
 	return (
 		<div>
 			<img src={data.url} alt={data.title} />
 			<p> {data.title} </p>
-			<i className="ri-add-circle-line cart" onClick={() => addToBeer(data)}></i>
-			<i className="ri-indeterminate-circle-line" onClick={() => subToBeer("meh")}></i>
-			<div>{data.qty ? <div>{data.qty}</div> : <div>you got no beer here</div> }</div>
+			<button onClick={() => addToBeer(data)}>add to cart</button>
 		</div>
 	)
 }
+
+//<i className="ri-indeterminate-circle-line" onClick={() => subToBeer(data)}></i>}
+//<i className="ri-add-circle-line cart" onClick={() => addToBeer(data)}></i>
 
 export default BeerImage
