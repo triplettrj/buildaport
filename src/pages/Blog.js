@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 function Blog(props) {
 	return (
 		<div>
-			Blog LISTEN MY STORY
+			Blog LISTEN to MY STORY
 		</div>
 	)
 }

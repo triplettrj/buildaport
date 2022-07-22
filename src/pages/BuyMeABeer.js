@@ -1,6 +1,8 @@
 import React, {useContext} from 'react'
 import BeerImage from "../components/BeerImage"
 import {Context} from "../Context"
+import Cart from "../pages/Cart"
+import { Link } from 'react-router-dom'
 import "../styles.css"
 
 const BuyMeABeer = () => {
@@ -26,7 +28,9 @@ const BuyMeABeer = () => {
                 <div>beerCart is EMPTY and i am thirsty</div> :
                 <div>{cartElements}</div>
                 }
+                <button><Link to="/cart"><h2 className='box'>go to the CHECKOUT</h2></Link></button>
             </div>
+
         </main>
     )
 }
