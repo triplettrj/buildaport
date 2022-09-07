@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/buildaport/static/css/main.505e93e9.css",
+    "main.js": "/buildaport/static/js/main.e490bf05.js",
+    "index.html": "/buildaport/index.html",
+    "main.505e93e9.css.map": "/buildaport/static/css/main.505e93e9.css.map",
+    "main.e490bf05.js.map": "/buildaport/static/js/main.e490bf05.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.505e93e9.css",
+    "static/js/main.e490bf05.js"
+  ]
+}
